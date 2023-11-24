@@ -52,9 +52,11 @@ export const tasksReducer = (state: TasksStateType, action: ActionsType): TasksS
             }
         }
         case "REMOVE-TODOLIST": {
-            let copyState = {...state}
-            delete copyState[action.id]
-            return copyState
+            // let copyState = {...state}
+            // delete copyState[action.id]
+            // return copyState
+            const {[action.id]:[], ...rest}=state
+            return rest
         }
         default:
             throw new Error("I don't understand this type")
