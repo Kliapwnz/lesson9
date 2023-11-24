@@ -55,7 +55,7 @@ export const tasksReducer = (state: TasksStateType, action: ActionsType): TasksS
             // let copyState = {...state}
             // delete copyState[action.id]
             // return copyState
-            const {[action.id]:[], ...rest}=state
+            const {[action.id]: [], ...rest} = state
             return rest
         }
         default:
