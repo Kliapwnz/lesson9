@@ -9,7 +9,7 @@ export type SecondActionType = {
 
 type ActionsType = removeTaskActionType | SecondActionType;
 
-export const tasksReducer = (state: TasksStateType, action: ActionsType) => {
+export const tasksReducer = (state: TasksStateType, action: ActionsType): TasksStateType => {
     switch (action.type) {
         case 'REMOVE-TASK': {
             return {
