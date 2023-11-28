@@ -71,8 +71,9 @@ export function AppWithReducer() {
     }
 
     function removeTodolist(id: string) {
-        dispatchToTodolists(removeTodolistAC(id))
-        dispatchToTasks(removeTodolistAC(id))
+        let action = removeTodolistAC(id)
+        dispatchToTodolists(action)
+        dispatchToTasks(action)
 
     }
 
