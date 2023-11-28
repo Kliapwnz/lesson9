@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
     addTodolistAC,
     changeTodolistFilterAC,
@@ -8,6 +8,19 @@ import {
 } from './todolists-reducer';
 import {v1} from 'uuid';
 import {FilterValuesType, TodolistType} from '../App';
+
+beforeEach(()=>{
+
+})
+
+let todolistId1 = v1();
+let todolistId2 = v1();
+
+const startState: Array<TodolistType> = [
+    {id: todolistId1, title: "What to learn", filter: "all"},
+    {id: todolistId2, title: "What to buy", filter: "all"}
+]
+
 
 test('correct todolist should be removed', () => {
     let todolistId1 = v1();
