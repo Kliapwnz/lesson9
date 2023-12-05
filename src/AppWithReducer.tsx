@@ -78,8 +78,9 @@ function AppWithReducer() {
     }
 
     function addTodolist(title: string) {
-        dispatchToTasks(addTodolistAC(title))
-        dispatchToTodolists(addTodolistAC(title))
+        let newTodo = addTodolistAC(title)
+        dispatchToTasks(newTodo)
+        dispatchToTodolists(newTodo)
     }
 
     return (
